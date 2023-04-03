@@ -21,4 +21,8 @@ jobs:
       - name: Yarn deps
         run: yarn deps
       - name: Cypress run
-        run: npx cypress run --env TFCHAIN_MNEMONICS=${{ secrets.TFCHAIN_MNEMONICS }}
+        uses: cypress-io/github-action@v4.2.0
+        with:
+          browser: chrome
+        env:
+          TFCHAIN_MNEMONICS: ${{ secrets.TFCHAIN_MNEMONICS }}
