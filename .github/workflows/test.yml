@@ -18,8 +18,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "yarn"
-      - name: Yarn deps
-        run: yarn deps
       - name: Write the cypress.env.json file 📝
       # use quotes around the secret, as its value
       # is simply inserted as a string into the command
