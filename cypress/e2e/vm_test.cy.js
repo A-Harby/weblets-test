@@ -22,7 +22,7 @@ describe("Weblets", function () {
 
       //Using the Enviroment Variables Credentials
       if (this.credentials.Mnemonics == "Add your Mnemonics") {
-        this.credentials.Mnemonics = Cypress.env("TFCHAIN_MNEMONICS");
+        this.credentials.Mnemonics = Cypress.env("TFCHAIN_MNEMONICS").TFCHAIN_MNEMONICS;
       }
     });
 
