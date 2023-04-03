@@ -27,5 +27,3 @@ jobs:
         uses: cypress-io/github-action@v4.2.0
         with:
           browser: chrome
-        env:
-          TFCHAIN_MNEMONICS: ${{ secrets.TFCHAIN_MNEMONICS }}
