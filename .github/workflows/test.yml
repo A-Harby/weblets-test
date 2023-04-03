@@ -18,9 +18,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "yarn"
-      - name: Write the cypress.env.json file 📝
-      # use quotes around the secret, as its value
-      # is simply inserted as a string into the command
+      - name: Write the cypress.env.json file
         run: |
           echo '${{ secrets.TFCHAIN_MNEMONICS }}' > cypress.env.json
       - name: Cypress run
